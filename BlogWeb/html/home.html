@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>HOME </title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+</head>
+<body>
+<div>
+       <h1 style="background: oldlace;"><b>BLOG VILLE</b></h1>
+
+        <h2 style="text-decoration-color: darkslategrey ; backdrop-filter: brightness(2); background-blend-mode: color;">Creating Your Blog Come With Ease</h2>
+ </div>
+ <div>
+       <ul style="list-style-type: none; padding-left: 0">
+        <li><a href="/home"><button class="w3-button w3-padding-large w3-border-light-grey w3-blue-grey"><b>HOME</b></button></a></li>
+        <li><a href="/add"><button class="w3-button w3-padding-large w3-hover-border-light-grey w3-blue-gray"><b>ADD BLOG</b></button></a></li>
+        <li><a href="/view"><button class="w3-button w3-padding-large w3-border-light-grey w3-blue-grey"><b>VIEW BLOG</b></button></a></li>
+       </ul>
+ </div>
+
+<br>
+    {{range.}}
+     {{.Id}}
+    <h1>{{.Heading}}</h1>
+    <p>{{.Content}}</p>
+    {{end}}
+</body>
+</html>
+

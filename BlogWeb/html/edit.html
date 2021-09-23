@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Edit Blog</title>
+</head>
+<body>
+    <h1>Edit Blog</h1>
+    <form action="/{{.Id}}/blogs/update" method="post">
+        <label>Heading:</label><br>
+        <input type="text" value="{{.Heading}}" name="heading"><br>
+        <label>Content: </label><br>
+        <textarea rows="4" cols="50" name="description">{{.Content}}</textarea></label></p>
+        <input type="submit" value="submit">
+    </form>
+</body>
+</html>

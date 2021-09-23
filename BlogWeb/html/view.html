@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>VIEW BLOG</title>
+</head>
+<body style="background-color: #d7d7d7; ">
+    <div class = "grid">
+        <h1 style="align-content: center; display: inline-grid;">WELCOME TO THIS AMAZING PLATFORM!</h1>
+    </div>
+     <div>
+               <ul style="list-style-type: none; padding-left: 0">
+                <li><a href="/home"><button class="w3-button w3-padding-large w3-border-light-grey w3-blue-grey"><b>HOME</b></button></a></li>
+                <li><a href="/add"><button class="w3-button w3-padding-large w3-hover-border-light-grey w3-blue-gray"><b>ADD BLOG</b></button></a></li>
+                <li><a href="/view"><button class="w3-button w3-padding-large w3-border-light-grey w3-blue-grey"><b>VIEW BLOG</b></button></a></li>
+               </ul>
+
+    </div>
+<div style="align-content: center;background-color: lavender">
+    <table style="font-family: Futura;font-size: small;" >
+        <tr>
+            <th>Heading</th>
+            <th>Content</th>
+            <th>Actions</th>
+        </tr>
+
+            <tr>
+                {{range $key,$value := . }}
+                {{.Id}}
+                <td> {{$value.Heading}}</td>
+                <td>{{$value.Content}}</td>
+{{/*                <td>{{$value.CreatedTime}}</td>*/}}
+                <td>
+                    <a href="/{{$key}}/edit" >Edit</a> |
+                    <a href="/{{$key}}/blogs/delete" >Delete</a>
+                </td>
+            </tr>
+        {{end}}
+    </table>
+</div>
+
+</body>
+</html>
