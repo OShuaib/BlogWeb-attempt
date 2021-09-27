@@ -105,12 +105,10 @@ func UpdateBlog(w http.ResponseWriter, r *http.Request) {
 	vars := chi.URLParam(r,"id")
 	var blogToUpd Blog
 	if blog, ok := Blogs[vars]; ok {
-		r.ParseForm() //nolint:errcheck
+		r.ParseForm()
 		blogToUpd.Heading = r.PostFormValue("heading")
 		blogToUpd.Content = r.PostFormValue("description")
 		blogToUpd.CreationTime = blog.CreationTime
-		//delete existing item and add the updated item
-		//delete(Blogs, vars)
 		Blogs[vars] = blogToUpd
 	} else {
 		http.Error(w, "Could not find the resource to update.", http.StatusBadRequest)
@@ -129,11 +127,5 @@ func DeleteBlog(w http.ResponseWriter, r *http.Request) {
 	} else {
 		http.Error(w, "Could not find the resource to delete.", http.StatusBadRequest)
 	}
-
-	//err := templates.ExecuteTemplate(w, "view.html", Blogs)
-	//if err != nil {
-	//	log.Println(err)
-	//
-	//}
 	http.Redirect(w, r, "/view", http.StatusMovedPermanently)
 }

@@ -1,3 +1,0 @@
-go: cannot find main module, but found .git/config in /Users/admin/Desktop/Olurode/go/src/BlogPost
-	to create a module there, run:
-	go mod init
