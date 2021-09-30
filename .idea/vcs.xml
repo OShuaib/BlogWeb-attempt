@@ -5,5 +5,7 @@
     <mapping directory="$PROJECT_DIR$/../.." vcs="Git" />
     <mapping directory="$PROJECT_DIR$/.." vcs="Git" />
     <mapping directory="$PROJECT_DIR$" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/BlogWeb" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/BlogWeb/golang-template" vcs="Git" />
   </component>
 </project>

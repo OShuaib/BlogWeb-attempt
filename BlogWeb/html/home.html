@@ -10,7 +10,6 @@
 <body>
 <div>
        <h1 style="background: oldlace;"><b>BLOG VILLE</b></h1>
-
         <h2 style="text-decoration-color: darkslategrey ; backdrop-filter: brightness(2); background-blend-mode: color;">Creating Your Blog Come With Ease</h2>
  </div>
  <div>
@@ -22,11 +21,16 @@
  </div>
 
 <br>
-    {{range.}}
+    {{range .}}
      {{.Id}}
     <h1>{{.Heading}}</h1>
     <p>{{.Content}}</p>
     {{end}}
+
+
 </body>
+<div>
+<footer style= "b"> @Little did we know </footer>
+</div>
 </html>
 

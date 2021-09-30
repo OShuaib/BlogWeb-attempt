@@ -24,14 +24,14 @@
         </tr>
 
             <tr>
-                {{range $key,$value := . }}
+                {{range $value := . }}
                 {{.Id}}
                 <td> {{$value.Heading}}</td>
                 <td>{{$value.Content}}</td>
 {{/*                <td>{{$value.CreatedTime}}</td>*/}}
                 <td>
-                    <a href="/{{$key}}/edit" >Edit</a> |
-                    <a href="/{{$key}}/blogs/delete" >Delete</a>
+                    <a href="/{{$value.Id}}/edit" >Edit</a> |
+                    <a href="/{{$value.Id}}/blogs/delete" >Delete</a>
                 </td>
             </tr>
         {{end}}
